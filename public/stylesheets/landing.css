@@ -1,0 +1,23 @@
+body {
+	background-color: #000;
+}
+
+#landing-header {
+	position: relative;
+	text-align: center;
+	margin: 20% auto;	
+}
+
+#landing-header h1 {
+	color: white;
+}
+
+#landing-header hr {
+	background-color: white;
+	width: 30%;
+}
+
+#landing-header a {
+	margin-top: 7px;
+}
+
