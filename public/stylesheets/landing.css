@@ -23,25 +23,18 @@ body {
 	margin-top: 7px;
 }
 
-#info_1 {
-	background-color: black;
+.info_para {
+	line-height: 2;
+	font-size: 1.2rem
 }
 
-#info_1_image {
-	height: 100px;
-	width: 100px;
+.section {
+	margin-top: 100px;
 }
 
 @media (max-width: 1200px) {
-	#info_1_heading {
+	#info_heading {
 		font-weight: 100; 
 		font-size: 3rem
-	}
-}
-
-@media (max-width: 600px) {
-	#info_1_heading {
-		font-weight: 100; 
-		font-size: 1rem
 	}
 }
