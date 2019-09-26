@@ -10,7 +10,42 @@
 	<div id="landing-header">
 		<h1>Welcome to Singularity!</h1>
 			<hr>
-		<a href="/" class="btn btn-lg btn-outline-light">Get Started!</a>
+		<a href="/" class="btn btn-lg btn-outline-light" data-toggle="modal" data-target="#loginModal" >Get Started!</a>
+	</div>
+
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h5 class="modal-title ">
+						Member Login
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row align-items-center justify-content-center">
+						<div>
+							<form action="/login" method="POST">
+								<div class="form-group">
+									<label class="text-dark lead" for="Username">Username</label>
+									<input type="text" class="form-control" name="username" placeholder="Enter username">
+								</div>
+								<div class="form-group">
+									<label class="text-dark lead" for="Password">Password</label>
+									<input type="password" class="form-control" name="password" placeholder="Enter password">
+								</div>
+								<div class="form-group">
+									<button class="btn btn-outline-dark">Login</button>
+								</div>
+								<small>Not a member? <span> <a href="">Sign up now!</a></span></small>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	
