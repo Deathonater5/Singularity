@@ -1,5 +1,7 @@
 body {
 	background-color: #000;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 #landing-header {
@@ -21,3 +23,25 @@ body {
 	margin-top: 7px;
 }
 
+#info_1 {
+	background-color: black;
+}
+
+#info_1_image {
+	height: 100px;
+	width: 100px;
+}
+
+@media (max-width: 1200px) {
+	#info_1_heading {
+		font-weight: 100; 
+		font-size: 3rem
+	}
+}
+
+@media (max-width: 600px) {
+	#info_1_heading {
+		font-weight: 100; 
+		font-size: 1rem
+	}
+}
