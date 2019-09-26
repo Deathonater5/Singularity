@@ -1,8 +1,5 @@
 # Singularity
-## A unique social netoworking platform that lets you post just once a year!
-
-
----
+### A unique social netoworking platform that lets you post just once a year!
 
 ### Run using
 
