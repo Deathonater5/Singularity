@@ -56,6 +56,7 @@ app.use(userRoutes);
 const PORT = 8080
 app.listen(PORT, () => {
 	console.log("Singularity server has started");
+	console.log("site can be accessed at: http://localhost:8080/");
 })
 	
 		
