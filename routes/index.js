@@ -31,7 +31,9 @@ router.post("/register", (req, res) => {
 
 
 // Login routes
-router.post("/login", passport.authenticate("local"), (req, res) => {
+router.post("/login", passport.authenticate("local", {
+	failureRedirect: "/"
+}), (req, res) => {
 	res.redirect("/" + req.user._id + "/feed");
 });
 
