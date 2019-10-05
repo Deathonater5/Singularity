@@ -23,7 +23,8 @@ router.post("/register", (req, res) => {
 			return res.render("register");
 		}
 		passport.authenticate("local")(req, res, () => {
-			res.redirect("/" + req.user._id + "/feed", {currentUser: req.user});
+			const newlyRegisteredUser = User.findOne({username: req.body.username});
+			res.redirect("/" + newlyRegisteredUser._id + "/feed");
 		});
 	});
 });

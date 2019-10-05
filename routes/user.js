@@ -9,7 +9,7 @@ router.get("/:user_id/feed", (req, res) => {
 });
 
 router.get("/:user_id/profile", (req, res) => {
-	res.send("this will be your profile page")
+	res.send("this will be your profile page: " + req.user.username)
 })
 
 module.exports = router;
