@@ -1,11 +1,27 @@
-<% include ./partials/header  %>
-<h1>this is the register page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Singularity | Register</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/stylesheets/landing.css">
+</head>
+<body>
 
-<form action="/register" method="POST">
-	<input type="text" placeholder="username" name="username">
-	<input type="password" placeholder="password" name="password">
-	<button>Sign up</button>
+	<div class="container d-flex align-items-center justify-content-center">
+		<div style="background: transparent !important" class="jumbotron">
+			<h1 class="text-light">Signup for Singularity!</h1>
+			<form action="/register" method="POST">
+				<div class="form-group">
+					<label class="text-light" for="InputUsername">Username</label>
+					<input type="text" class="form-control" id="InputUsername" name="username" placeholder="Enter username">
+				</div>
+				<div class="form-group">
+					<label class="text-light" for="InputPassword">Password</label>
+					<input type="password" class="form-control" id="InputPassword" name="password" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-outline-light">Sign Up!</button>
+				</form>
+		</div>
+	</div>
 
-</form>
-
-<% include ./partials/footer  %>
+<% include ./partials/footer %>

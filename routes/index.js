@@ -19,22 +19,26 @@ router.post("/register", (req, res) => {
 	const newUser = new User({username: req.body.username});
 	User.register(newUser, req.body.password, (err) => {
 		if (err) {
+			console.log(err);
 			return res.render("register");
 		}
 		passport.authenticate("local")(req, res, () => {
-			res.redirect("/feed");
+			res.redirect("/" + req.user._id + "/feed", {currentUser: req.user});
 		});
 	});
 });
 
 
-
 // Login routes
 router.post("/login", passport.authenticate("local"), (req, res) => {
-	res.redirect("/feed");
+	res.redirect("/" + req.user._id + "/feed");
 });
 
+
+
+// Logout route
 router.get("/logout", (req, res) => {
+	console.log("Bye: " + req.user.username);
 	req.logOut();
 	res.redirect("/");
 });
