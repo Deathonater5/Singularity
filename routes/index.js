@@ -1,8 +1,10 @@
+
 // Require
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 const User = require("../models/user");
+const alert = require("alert-node");
 
 // Root route
 router.get("/", (req, res) => {
@@ -42,6 +44,11 @@ router.post("/login", passport.authenticate("local", {
 // Logout route
 router.get("/logout", (req, res) => {
 	console.log("Bye: " + req.user.username);
+	// res.status(200).json({
+	// 	message: "Bye: " + req.user.username
+	// });
+	alert("Bye: " + req.user.username, "yad");
+
 	req.logOut();
 	res.redirect("/");
 });
